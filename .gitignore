@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Michael Klamminger <https://gorgeit.com>
+# SPDX-License-Identifier: Apache-2.0
+
+# Scan results and reports contain real file/folder names - never commit them
+results
+results/
+*_inventory.csv
+*_summary.csv
+*_errors.csv
+*_report.pdf
+
+# Pseudonymization keys (--anon-key) - never commit them
+anon-key/
+*.key
+
+# Local notes
+NOTES.md
+
+__pycache__/
+.venv/
