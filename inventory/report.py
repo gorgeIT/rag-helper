@@ -9,9 +9,9 @@
 report.py - PDF report from the output of scan.py (rag-inventory).
 
 Reads <prefix>_inventory.csv and <prefix>_errors.csv and writes
-<prefix>_report.pdf with the same sections as the analysis notebook:
-ingest classes, top folders, file types, exclusions / sensitive folders,
-file age, errors. Works the same for plain and --anonymize/--coarse runs.
+<prefix>_report.pdf with these sections: overview, ingest classes, top
+folders, file types, exclusions / sensitive folders, file age, errors.
+Works the same for plain and --anonymize/--coarse runs.
 
 Examples:
   uv run report.py results/office
@@ -160,7 +160,7 @@ def section(title, text=None, *first):
 
 
 # --------------------------------------------------------------------------
-# report sections (same order as the notebook)
+# report sections (in output order)
 # --------------------------------------------------------------------------
 def overview(inv, errors, prefix, title):
     anonymized = inv["rel_path"].str.match(r"^(.*/)?f_[0-9a-f]{16}").mean() > 0.9

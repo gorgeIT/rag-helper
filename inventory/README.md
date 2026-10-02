@@ -166,8 +166,7 @@ uv run scan.py \\fileserver\daten --out office
 
 ## PDF report
 
-`report.py` turns the CSVs of a run into a PDF report with the same sections as the
-analysis notebook:
+`report.py` turns the CSVs of a run into a PDF report with these sections:
 1. overview
 2. ingest classes
 3. top folders
